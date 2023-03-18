@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="wtypeth=device-wtypeth, initial-scale=1.0">
+    <link rel="shortcut icon"
+        href="https://upload.wikimedia.org/wikipedia/tr/8/85/Apple_Hesap_makinesi_Calculator-icon.png"
+        type="image/x-icon">
+    <title>Four Transactions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<style>
+
+</style>
+
+<body>
+
+    <h1 class="text-center">Dört İşlem</h1>
+
+    <div class="container text-center mt-4">
+        <div><input type="text" id="s1"></div>
+        <div><input type="text" id="s2"></div>
+        <div class="mt-2 btn btn-success" id="topla">Toplama</div>
+        <div class="mt-2 btn btn-danger" id="cikar">Çıkarma</div>
+        <div class="mt-2 btn btn-primary" id="bol">Bölme</div>
+        <div class="mt-2 btn btn-warning" id="carp">Çarpma</div>
+        <div><span id="toplam"></span></div>
+    </div>
+
+
+</body>
+<script>
+
+    var sayi1 = document.getElementById("s1");
+    var sayi2 = document.getElementById("s2");
+    var toplamaBtn = document.getElementById("topla");
+    var cikarmaBtn = document.getElementById("cikar");
+    var carpmaBtn = document.getElementById("carp");
+    var bolmeBtn = document.getElementById("bol");
+    var total = document.getElementById("toplam");
+
+    toplamaBtn.onclick = function () {
+        var toplam = Number(sayi1.value) + Number(sayi2.value);
+        total.innerHTML = toplam;
+    }
+
+    cikarmaBtn.onclick = function () {
+        var toplam = Number(sayi1.value) - Number(sayi2.value);
+        total.innerHTML = toplam;
+    }
+
+    carpmaBtn.onclick = function () {
+        var toplam = Number(sayi1.value) * Number(sayi2.value);
+        total.innerHTML = toplam;
+    }
+
+    bolmeBtn.onclick=function(){
+        var toplam = Number (sayi1.value) / Number (sayi2.value);
+        total.innerHTML=toplam;
+    }
+
+</script>
+
+</html>
